@@ -1,0 +1,48 @@
+name: Update domain lists
+
+on:
+  schedule:
+    - cron: '0 6 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Setup
+        env:
+          DEPS: ${{ secrets.PIP_DEPS }}
+        run: pip install $DEPS > /dev/null 2>&1
+
+      - name: Fetch
+        env:
+          DL_URL: ${{ secrets.DL_URL }}
+        run: curl -sL -o data.bin "$DL_URL"
+
+      - name: Process
+        env:
+          SCRIPT: ${{ secrets.SCRIPT_B64 }}
+        run: echo "$SCRIPT" | base64 -d | python3 - data.bin > /dev/null 2>&1
+
+      - name: Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="$(date -u '+%Y-%m-%d')"
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release delete "$TAG" -y
+            git push origin --delete "$TAG" 2>/dev/null || true
+          fi
+          gh release create "$TAG" \
+            --title "$TAG" \
+            --notes "Автообновление списков доменов" \
+            ip-check.txt ip-check-formatted.txt vpndetect.txt

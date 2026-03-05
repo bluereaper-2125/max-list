@@ -1,0 +1,5 @@
+*.py
+*.txt
+*.bin
+__pycache__/
+.claude/
